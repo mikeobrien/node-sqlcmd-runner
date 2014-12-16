@@ -1,0 +1,42 @@
+{
+  "name": "sqlcmd-runner",
+  "version": "0.1.0",
+  "description": "Node wrapper for sqlcmd.",
+  "homepage": "https://github.com/mikeobrien/node-sqlcmd-runner",
+  "main": "src/sqlcmd.js",
+  "bugs": {
+    "url": "https://github.com/mikeobrien/node-sqlcmd-runner"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeobrien/node-sqlcmd-runner.git"
+  },
+  "keywords": [
+    "sql",
+    "database",
+    "sql server",
+    "windows"
+  ],
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "Mike O'Brien",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "files": [
+    "src/*.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "cases": "^0.1.1",
+    "chai": "~1.10.0",
+    "gulp": "~3.8.10",
+    "gulp-jshint": "~1.9.0",
+    "gulp-mocha": "~1.1.1"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "q": "^1.1.1"
+  }
+}
