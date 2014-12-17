@@ -1,6 +1,6 @@
 {
   "name": "sqlcmd-runner",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node wrapper for sqlcmd.",
   "homepage": "https://github.com/mikeobrien/node-sqlcmd-runner",
   "main": "src/sqlcmd.js",
@@ -30,7 +30,7 @@
   ],
   "devDependencies": {
     "cases": "^0.1.1",
-    "chai": "~1.10.0",
+    "chai": "^1.10.0",
     "gulp": "~3.8.10",
     "gulp-jshint": "~1.9.0",
     "gulp-mocha": "~1.1.1"

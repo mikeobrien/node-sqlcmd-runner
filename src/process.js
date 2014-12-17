@@ -1,12 +1,11 @@
 var process = require('child_process'),
     path = require('path'),
-    Q = require('q'),
-    parser = require('./parser');
+    Q = require('q');
 
 module.exports = function(command) {
 
     console.log();
-    console.log(command.path + ' ' + command.args);
+    console.log(command.path + ' ' + command.args.join(' '));
     console.log();
 
     var sqlcmd = process.spawn(command.path, command.args);
@@ -26,10 +25,10 @@ module.exports = function(command) {
     var deferred = Q.defer();
 
     sqlcmd.on('exit', function(code) { 
+        console.log('Exit code: ' + code);
         if (code > 0) {
-            var errors = parser(stdout) || stderr;
-            var message = 'sqlcmd failed' + (errors ? 
-                ': \r\n\r\n' + errors : '.');
+            var message = 'sqlcmd failed' + (stderr ? 
+                ': \r\n\r\n' + stderr : '.');
             deferred.reject(new Error(message));
         }
         else deferred.resolve();
